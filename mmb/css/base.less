@@ -1,0 +1,198 @@
+//public
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;;
+    -webkit-box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+body {
+    font-size: 12px;
+    color: #000;
+    font-family: "MicroSoft YaHei","sans-serif";
+    background-color: white;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+ol,ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    text-decoration: none;
+    color: #000;
+}
+a:-webkit-any-link ,
+a:focus,
+a:link{
+    text-decoration: none;
+}
+input,textarea,select {
+    border: none;
+    outline: none;
+    resize: none;
+    /*清除浏览器给表单元素默认添加的样式*/
+    -webkit-appearance: none;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.tl {
+    text-align: left;
+}
+.tc {
+    text-align: center;
+}
+.tr {
+    text-align: right;
+}
+.hide {
+    display: none;
+}
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+// 头部
+@color:#ff841d;
+#header{
+    height: 50px;
+    background: @color;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 11px 12px 14px 16px;
+    .header-logo img{
+        width: 186px;
+        height: 25px;
+    }
+    .header-app img{
+        width: 34px;
+        height: 34px;
+    }
+
+    h1{
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        display: inline-block;
+        margin-top: 7px;
+    }
+}
+// 搜索
+#search{
+    height: 50px;
+    border-bottom: 1px solid #e6e6e6;
+    background: #fff;
+    padding: 10px;
+    position: relative;
+    input:nth-child(1){
+        background: #f1f1f1;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 15px;
+        padding: 0 20px;
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    input:nth-child(2){
+        width: 63px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background: @color;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 15px;
+        position: absolute;
+        right: 7px;
+        top: 10px;
+    }
+}
+
+    // 底部
+    #footer{
+        background:#f2f2f2;
+        .pages{
+            width: 100%;
+            height: 40px;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            box-sizing: border-box;
+            > div{
+                width: 33.33%;
+                float: left;
+                text-align: center;
+                line-height: 30px;
+                > a{
+                    border: 1px solid #ccc;
+                    height: 30px;
+                    width: 60px;
+                    display: block;
+                    margin: 4px 0 0 10%;
+                    border-radius: 5px;
+                }
+
+            }
+            > div:nth-child(2) > select{
+                    height: 30px;
+                    width: 60px;
+                    border: 1px solid #ccc;
+                    // -webkit-appearance: button;
+                    margin-top: 4px;
+                    padding-left: 16px;
+                    border-radius: 5px;
+                }
+            
+            }
+        .container .row{
+            height: 40px;
+            border-top: 1px solid #c4c4c4;
+            border-bottom: 1px solid #c4c4c4;
+            line-height: 40px;
+            text-align: center;
+            font-size: 14px;
+            a{
+               color: #5a5a5a; 
+            }
+        }
+        .container .row div[class^="col-xs"]{
+            border-right: 1px solid #c4c4c4;
+        }
+        .container .row div:last-child{
+            border-right: none;
+        }
+        .download{
+            padding: 15px 0;
+            font-size: 12px;
+            text-align: center;
+            color: #5a5a5a;
+            span{
+                color: #fd1643;
+            }
+        }
+    }

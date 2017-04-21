@@ -1,0 +1,80 @@
+@charset "utf-8";
+@color:#ff841d;
+#header{
+    height: 50px;
+    background: @color;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 11px 12px 14px 16px;
+    .header-logo img{
+        width: 186px;
+        height: 25px;
+    }
+    .header-app img{
+        width: 34px;
+        height: 34px;
+    }
+}
+// 搜索
+#search{
+    height: 50px;
+    border-bottom: 1px solid #e6e6e6;
+    background: #fff;
+    padding: 10px;
+    position: relative;
+    input:nth-child(1){
+        background: #f1f1f1;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 15px;
+        padding: 0 20px;
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    input:nth-child(2){
+        width: 63px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background: @color;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 15px;
+        position: absolute;
+        right: 7px;
+        top: 10px;
+    }
+}
+
+//内容
+    .context{
+        padding: 0 10px;
+        .media{
+            padding: 10px 0;
+            .media-left{
+                margin-right: 10px;
+                img{
+                    width:100px;
+                    height: 100px;
+                }
+            }
+            .media-body .media-heading{
+                font-size: 14px;
+                margin-top: 10px;
+                line-height: 20px;
+                span{
+                    color: #ff6c00;
+                }
+            }
+            .media-body p{
+                margin-top: 50px;
+                span{
+                    margin-right: 3px;
+                    color: #a1a1a1;
+                }
+            }
+        }
+    }
+
+
+
+

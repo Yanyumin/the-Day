@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!--引入第三方框架UI-->
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet/less" href="css/base.less">
+        <link rel="stylesheet/less" href="css/inlanddiscount.less">
+        <script type="text/javascript" src="lib/less/less.js"></script>
+
+        <script src="lib/template.js"></script>
+        <title>慢慢买</title>
+    </head>
+    <body>
+    <!-- 头部 -->
+    <header id="header">
+        <a href="index.html" class="fl header-logo">
+            <img id="image" src="images/back.png"style="width:19px;height:19px;">
+        </a>
+        <h1>国内折扣</h1>
+        <a href="javascript" class="fr header-app">
+            <img src="images/header_app.png">
+        </a>
+    </header>
+
+
+<!-- 内容 -->
+    <div class="context">
+        <div class="cu-friend" id="cxdiv">
+            
+        </div>
+    </div>
+
+<!-- 底部 -->
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3">
+                    <a href="#">登录</a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="#">注册</a>
+                </div>
+                <div class="col-xs-6">
+                    <a href="#">点击返回顶部</a>
+                </div>
+            </div>
+        </div>
+        <div class="download">
+            <p><span>手机APP下载</span>慢慢买手机版——掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/inlanddiscount.js"></script>
+    <script type="text/html" id="proTemp">
+        <ul>
+            {{each result as value i}}
+                <li class="border-img">
+                    <a href="#">
+                        <div class="img">
+                            {{#value.productImg}}
+                        </div>
+                        <div class="title">{{value.productName}}</div>
+                        <div class="subtit">{{value.productPrice}}</div>
+                        <div class="info">
+                            <div class="mall"><span>{{value.productFrom}}</span><span>|</span><span>{{value.productTime}}</span></div>
+                        </div>
+                    </a>
+                </li>
+            {{/each}}
+        </ul>
+    </script>
+    </body>
+</html>

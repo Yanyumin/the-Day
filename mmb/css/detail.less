@@ -1,0 +1,48 @@
+@charset "utf-8";
+// 内容
+    .context-header{
+        background: #f1f1f1;
+        height: 50px;
+        border-bottom: 1px solid #dedede;
+        line-height: 50px;
+        padding: 0 10px;
+        font-size: 14px;
+        > span,
+        > a{
+            margin: 0 4px;
+        }
+    }
+    .context{
+        text-align: center;
+        .link{
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 30px;
+            height: 30px;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            background: #ffc629;
+            .col-xs-4{
+                border-left: 1px solid #ccc;
+            }
+            .col-xs-4:first-child{
+                border: none;
+            }
+        }
+        .describe{
+            padding: 0 15px;
+            font-size: 18px;
+            text-align: center;
+        }
+        table {
+            font-size: 16px;
+            td:nth-child(2){
+                text-align: left;
+            }
+            td:nth-child(3){
+                text-align: right;
+                color: red;
+                padding-right: 15px;
+            }
+        }
+    }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!--引入第三方框架UI-->
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet/less" href="css/base.less">
+        <link rel="stylesheet/less" href="css/baicaijia.less">
+        <script type="text/javascript" src="lib/less/less.js"></script>
+
+        <script src="lib/template.js"></script>
+        <title>慢慢买</title>
+    </head>
+    <body>
+    <!-- 头部 -->
+    <header id="header">
+        <a href="index.html" class="fl header-logo">
+            <img id="image" src="images/back.png"style="width:19px;height:19px;">
+        </a>
+        <h1>白菜价-淘宝内部券</h1>
+        <a href="javascript" class="fr header-app">
+            <img src="images/header_app.png">
+        </a>
+    </header>
+
+<!-- 内容 -->
+    <div class="context">
+        <div class="head">
+            <div class="tabs" style="overflow: hidden;">
+                <div class="scroller">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+        <div class="quen">
+            <img src="images/quan_banner_wap.png" width="100%" alt="">
+        </div>
+        <div class="pro">
+            <div class="media"></div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3">
+                    <a href="#">登录</a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="#">注册</a>
+                </div>
+                <div class="col-xs-6">
+                    <a href="#">点击返回顶部</a>
+                </div>
+            </div>
+        </div>
+        <div class="download">
+            <p><span>手机APP下载</span>慢慢买手机版——掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/baicaijia.js"></script>
+    <script type="text/html" id="navTemp">
+        {{each result as value i}}
+            <li class="navLi">
+                <a href="#" titleId="{{value.titleid}}">{{value.title}}</a>
+            </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="proTemp">
+        {{each result as value i}}
+            <div class="media-left">
+                <a href="#">
+                    {{#value.productImg}}
+                </a>
+            </div>
+            <a href="#" class="media-body">
+                <h4 class="media-heading"></h4>
+                <p>券后{{#value.productPrice}}</p>
+                <p>{{#value.productCouponRemain}}</p>
+                <p><span class="fl">{{#value.productCoupon}}</span></p>
+            </a>
+        {{/each}}
+    </script>
+    </body>
+</html>

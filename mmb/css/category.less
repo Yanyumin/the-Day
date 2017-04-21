@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+// 头部
+@color:#ff841d;
+// 内容
+.context{
+    padding: 10px;
+    margin-bottom: 0px;
+    background: #f2f2f2;
+    div[id^="headingOne"]{
+        padding: 0;
+    }
+    #sort-a{
+        display: block;
+        padding: 10px 15px;
+    }
+    #sort-body{
+        padding: 0;
+        border-top: none;
+        .container .row{
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 12px;
+            .col-xs-4{
+                border-right: 1px solid #ccc;
+                border-bottom: 1px solid #cccccc;
+                padding: 0;
+            }
+            .row:last-child{
+                border-right: none;
+            }
+            a{
+                color: #333;
+            }
+        }
+    }
+}
+
